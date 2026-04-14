@@ -53,4 +53,40 @@ describe("Test suit for Application", () => {
     );
     expect(termsElement).toBeInTheDocument();
   });
+
+  test("renders correctly 3", () => {
+    render(<Application />);
+    const nameField = screen.getByPlaceholderText("Full Name");
+    expect(nameField).toBeInTheDocument();
+  });
+
+  test("renders correctly 4", () => {
+    render(<Application />);
+    const pElement = screen.getByText("All fields are mandatory");
+    expect(pElement).toBeInTheDocument();
+  });
+
+  test("renders correctly 5", () => {
+    render(<Application />);
+    const nameElement = screen.getByDisplayValue("Milind");
+    expect(nameElement).toBeInTheDocument();
+  });
+
+  test("renders correctly 6",()=>{
+    render(<Application/>);
+    const imageWithAlt = screen.getByAltText("a person with a laptop");
+    expect(imageWithAlt).toBeInTheDocument();
+  })
+
+  test("renders correctly 7", ()=>{
+    render(<Application/>)
+    const close = screen.getByTitle("close");
+    expect(close).toBeInTheDocument();
+  })
+
+  test("renders correctly 9",()=>{
+    render(<Application/>)
+    const customElement = screen.getByTestId("custom-element");
+    expect(customElement).toBeInTheDocument();
+  })
 });
