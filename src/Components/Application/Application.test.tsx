@@ -40,6 +40,7 @@ describe("Application", () => {
     expect(submitButton).toBeInTheDocument();
   });
 
+// example for getByLabelText
   test("renders  correctly 1",()=>{
     render(<Application/>);
 
@@ -49,4 +50,14 @@ describe("Application", () => {
     const termsElement = screen.getByLabelText("I agree to the terms and conditions");
     expect(termsElement).toBeInTheDocument();
   })
+
+//   getByPlaceHolderText example   
+  test("renders correctly 3",()=>{
+    render(<Application/>);
+
+    const nameField = screen.getByPlaceholderText("Full Name");
+
+    expect(nameField).toBeInTheDocument();
+  })
+
 });
