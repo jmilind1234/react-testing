@@ -39,4 +39,14 @@ describe("Application", () => {
     const submitButton = screen.getByRole("button");
     expect(submitButton).toBeInTheDocument();
   });
+
+  test("renders  correctly 1",()=>{
+    render(<Application/>);
+
+    const nameElement2 = screen.getByLabelText("Name");
+    expect(nameElement2).toBeInTheDocument();
+
+    const termsElement = screen.getByLabelText("I agree to the terms and conditions");
+    expect(termsElement).toBeInTheDocument();
+  })
 });
