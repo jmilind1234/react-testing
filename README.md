@@ -19,3 +19,39 @@
 ## getByTitle() - RTL query that returns the element that has matching title attribute.
 
 ## getByTestId() - RTL query that returns the element that has the matching data-testid attribute.
+
+# TextMatch - string
+<div>Hello World</div>
+
+## screen.getByText('Hello World'); //full string match
+## screen.getByText("llo Worl", {exact: false}); //substring match
+## screen.getByText("hello world", {exact: false}); //ignore case
+
+# TextMatch - regex
+<div>Hello World</div>
+
+## screen.getByText(/World/); //substring match
+## screen.getByText(/world/i); //substring match, ignore case
+## screen.getByText(/^hello world$/i); //full string match, ignore case
+
+## queryBy
+### Returns the matching node for a query, and return null if no elements match.
+### Useful for asserting an element that is not present.
+### Throws an error if more than one match is found.
+
+## queryAllBy
+### Returns all the matching nodes for a query, adn return an empty array if not elements match.
+
+## suffixes for queryBy and getBy are same.
+
+## getBy and getAllBy class of queries are used to assert if elements are present in the DOM.
+
+## queryBy and queryAllBy class of queries are used to assert if elements are nit present in the DOM.
+
+## findBy - Returns a Promise which resolves when an element is found which matches the gien query. The promise is rejected if no element is found or if more than one element is found after a default timeout of 1000ms.
+
+## findAllBy - Returns a promise which resolves to an array of elements when any elements are found which match a given query. The promise is rejected if no elements are found after a default timeout of 1000ms.
+
+# user-event library - to handle user interactions in react testing
+
+## fireEvent vs user-event - fireEvent is a method from RTL which is used to dispatch DOM events. user-event simulates full interactions, which may fire multiple events and do additional checks along the way.
