@@ -74,3 +74,9 @@
 ## Low Level Keyboard APIs - 
 ### keyboard('foo') //translate to: f,o,o
 ### keyboard('{Shift>}A{/Shift}') // translates to: Shift(Down), A,Shift(Up)
+
+# Testing custom hooks - 
+## renderHooks - function takes the hook to render, and it returns the object that has result property, result property contains the returned value.
+## act() - act take the function  and that function does execution os statement that is responsible for updating state. 
+
+# Movking functions = jest.fn()
