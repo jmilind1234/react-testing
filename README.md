@@ -55,3 +55,13 @@
 # user-event library - to handle user interactions in react testing
 
 ## fireEvent vs user-event - fireEvent is a method from RTL which is used to dispatch DOM events. user-event simulates full interactions, which may fire multiple events and do additional checks along the way.
+
+## click(), dblClick(),  tripleClick(), hover(), unhover() - these are convenience apis, these internally calls the Pointer interactions api.
+
+## Lower Pointer Interactions - 
+## Pointer APIs-
+### pointer({keys:'[MouseLeft]'})
+### pointer({keys: '[MouseLeft][MouseRight]'})
+### pointer('[MouseLeft][MouseRight]')
+### pointer('[MouseLeft>]')
+### pointer('[/MouseLeft]')
