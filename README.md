@@ -65,3 +65,12 @@
 ### pointer('[MouseLeft][MouseRight]')
 ### pointer('[MouseLeft>]')
 ### pointer('[/MouseLeft]')
+
+
+# keyboard Interactions
+## Utility API - type(), clear(), selectOptions(), deselectOptions(), upload()
+## Convenience API - tab(), we only one convenience api under keyboard interactions.
+## Clipboard APIs - copy(). cut(), paste()
+## Low Level Keyboard APIs - 
+### keyboard('foo') //translate to: f,o,o
+### keyboard('{Shift>}A{/Shift}') // translates to: Shift(Down), A,Shift(Up)

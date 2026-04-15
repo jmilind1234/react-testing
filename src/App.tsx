@@ -1,12 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Application } from './Components/Application/Application';
+import { AppProviders } from './Providers/app-provider';
+import MuiMode from './Components/mui/mui-mode';
 
 function App() {
   return (
-    <div className="App">
-      <Application/>
-    </div>
+    <AppProviders>
+      <div className='App'>
+       <MuiMode/>
+      </div>
+    </AppProviders>
   );
 }
 
