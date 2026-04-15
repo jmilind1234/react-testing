@@ -79,4 +79,4 @@
 ## renderHooks - function takes the hook to render, and it returns the object that has result property, result property contains the returned value.
 ## act() - act take the function  and that function does execution os statement that is responsible for updating state. 
 
-# Movking functions = jest.fn()
+# Mocking functions = jest.fn()
